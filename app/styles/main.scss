@@ -2,11 +2,88 @@ body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+    margin: 0px;
+    padding: 0px;
 }
+.container {
+  outline: 1px dashed yellow;
+  width: 1000px;
+  margin: 0 auto;
+} // end of .container
+
+
+
+
+///////////// here begins the styling for the .header section
 
 .header {
-    width: 960px;
-    height: 40px;
-    color: black;
+  outline: 1px dashed lime;
+  height: 100px;
+  color: black;
 
-}
+} // end of .header
+
+
+/////////////// here begins the styling for the .main section
+.main {
+  outline: 1px dashed lime;
+
+
+
+/////////////////////////// here begins the styling for the .sidebar section
+  .sidebar {
+    outline: 1px dashed red;
+    width: 290px;
+    vertical-align: top;
+    display: inline-block;
+
+    .profile {
+      outline: 1px dashed purple;
+      height: 300px;
+
+
+    } // end of .profile
+
+    .links {
+      outline: 1px dashed purple;
+      height: 500px;
+
+    } // end of .links
+
+  } // end of .sidebar
+
+
+
+
+////////////////here begins the styling for the .stream section
+
+  .stream {
+    outline: 1px dashed red;
+    width: 690px;
+    margin-left: 16px; // to give the margin btw stream and sidebar
+    vertical-align: top;
+    display: inline-block;
+    
+    .compose {
+      outline: 1px dashed purple;
+      height: 300px;
+    } // end of .compose
+
+    .tweets {
+      outline: 1px dashed purple;
+      vertical-align: top;
+
+      .tweet {
+        outline: 1px dashed purple;
+        height: 150px;
+
+      } // end of .tweet
+
+    } // end of .tweets
+
+  } // end of .strem
+  
+} // end of .main
+
+
+
