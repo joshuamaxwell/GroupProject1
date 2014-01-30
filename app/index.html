@@ -26,16 +26,24 @@
 
 
 <!-- Just as an example -->
-<div class="header"></div>
-    <div class="logo"></div>
-
-<div class="sidebar"></div>
-    <div class="profile"></div>
-    <div class="links"></div>
-    
-<div class="stream">
-    <div class="tweet"></div>
+<div class="header">
+<!--     this header class needs a height and then we'll probably use a .container inside to control the width? -->
 </div>
+
+<div class="main">
+    <div class="sidebar">
+        <div class="profile"></div>
+        <div class="links"></div>
+    </div> <!-- end of .sidebar div -->
+    
+    <div class="stream">
+        <div class="compose"></div>
+        <div class="tweets">
+            <!-- inside this tweets div will probably be where all of the templates get append() to -->
+            <div class="tweet"></div> <!-- here's an example but this div will prob need go get deleted -->
+        </div> <!-- end of the tweets div -->
+    </div> <!-- end of the .stream div -->
+</div> <!-- end of the .main div which is everything after the header div -->
 
 
         <!-- build:js scripts/vendor.js -->
