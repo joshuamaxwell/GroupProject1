@@ -126,4 +126,45 @@ body {
 } // end of .main
 
 
+/////////////// starting tweet styling
+    .tweet {
+      outline: 2px dashed black;
+      width: 610px;
+      height: 150px;
+    }
+    .tweet .avatar {
+      outline: 1px dashed purple;
+      overflow: hidden;
+      width: 130px;
+      height: 130px;
+      margin: 10px;
+      border-radius: 130px;
+      float: left;
+    }
+
+    .tweet .tweet-header {
+      outline: 1px dashed lime;
+      display: inline-block;
+      background: grey;
+      height: 25px;
+      line-height: 25px;
+    }
+
+    .tweet .message {
+      outline: 1px dashed lime;
+      height: 80px;
+      background: white;
+      padding: 10px;
+    }
+
+    .tweet .tweet-footer {
+      display: inline-block;
+      background: grey;
+      height: 25px;
+      line-height: 25px;
+    }
+
+    .tweet-footer img {
+      float: left;
+    }
 
