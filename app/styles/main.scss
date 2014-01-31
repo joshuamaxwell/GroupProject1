@@ -24,7 +24,7 @@ body {
   outline: 1px dashed lime;
   height: 100px;
   border-bottom: 1px #000;
-  z-index: 2;
+
     
     .home {
       display: inline-block;
@@ -58,7 +58,6 @@ body {
   width: 1050px;
   height: 100%;
   margin: 0 auto;
-  position: relative;
   outline: 1px dashed black;
   background: rgba(241, 228, 228, 0.35);
 
@@ -71,9 +70,8 @@ body {
     width: 290px;
     vertical-align: top;
     display: inline-block;
-    position: relative;
     margin-left: 16px;
-    z-index: 1;
+
 
     .top{
       width: 290px;
@@ -103,7 +101,7 @@ body {
     width: 200px;
     height: 190px;
     margin: 0 auto;
-    position: relative;
+  
     top: 12%;
   
 
@@ -115,7 +113,7 @@ body {
     height: 70px;
     width: 290px;
     margin: 0 auto;
-    position: relative;
+  
     top: 13%;
 
   }
@@ -171,7 +169,7 @@ body {
     margin-left: 16px; // to give the margin btw stream and sidebar
     vertical-align: top;
     display: inline-block;
-    position: absolute;
+    
 
     
     .compose {
@@ -195,10 +193,48 @@ body {
       }
 
       .tweet {
-        outline: 1px dashed purple;
-        height: 150px;
+      outline: 2px dashed black;
+      width: 690px;
+      height: 150px;
+    
+    .tweet .avatar {
+      outline: 1px dashed purple;
+      overflow: hidden;
+      width: 130px;
+      height: 130px;
+      margin: 10px;
+      border-radius: 130px;
+      float: left;
+    }
 
-      } // end of .tweet
+    .tweet .tweet-header {
+      outline: 1px dashed lime;
+      display: inline-block;
+      background: grey;
+      height: 25px;
+      line-height: 25px;
+    }
+
+    .tweet .message {
+      outline: 1px dashed lime;
+      height: 80px;
+      background: white;
+      padding: 10px;
+      width: 610px;
+    }
+
+    .tweet .tweet-footer {
+      display: inline-block;
+      background: grey;
+      height: 25px;
+      line-height: 25px;
+    }
+
+    .tweet-footer img {
+      float: left;
+    }
+
+     } //end of tweet
 
     } // end of .tweets
 
