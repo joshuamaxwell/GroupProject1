@@ -77,6 +77,15 @@ body {
   outline: 1px dashed lime;
   margin-top: 120px;
 
+.backbox {
+  width: 865px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  outline: 1px dashed black;
+  background: rgba(241, 228, 228, 0.35)
+
+}
 
 
 /////////////////////////// here begins the styling for the .sidebar section
@@ -85,6 +94,8 @@ body {
     width: 290px;
     vertical-align: top;
     display: inline-block;
+    position: relative;
+    margin-left: 16px;
 
     .top{
       width: 290px;
@@ -107,9 +118,64 @@ body {
     .profile {
       outline: 1px dashed purple;
       height: 300px;
+      border: 2px solid gray;
+      background: rgba(128, 128, 128, 0.83);
 
 
-    } // end of .profile
+    } 
+
+  .profpic {
+    outline: 1px dashed blue;
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    position: relative;
+    top: 12%;
+  
+
+  }
+
+
+  .posts {
+    outline: 1px dashed red;
+    height: 70px;
+    width: 290px;
+    margin: 0 auto;
+    position: relative;
+    top: 13%;
+
+  }
+
+  .tweetnum {
+    outline: 1px solid white;
+    display: inline-block;
+    height: 70px;
+    width: 90px;
+
+
+  }
+
+  .following {
+     outline: 1px solid white;
+     display: inline-block;
+     height: 70px;
+     width: 94px;
+
+
+  }
+
+  .followers {
+    outline: 1px solid white;
+    display: inline-block;
+    height: 70px;
+    width: 94px;
+
+  }
+
+
+
+
+    // end of .profile
 
     .links {
       outline: 1px dashed purple;
