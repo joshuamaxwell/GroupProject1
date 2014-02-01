@@ -65,26 +65,43 @@
                 <!-- inside this tweets div will probably be where all of the templates get append() to -->
                 <div class="tweet">
                     <div class="avatar">
-                    <img class="avatar-pic" src="http://www.lorempixel.com/150/150/people">
-    <!--       <img class="avatar-pic" src="<%= avatar %>"> -->
-                     </div> <!-- end of div.avatar -->
+                        <img class="avatar-pic" src="http://www.lorempixel.com/150/150/people">
+          <!--       <img class="avatar-pic" src="<%= avatar %>"> -->
+                    </div> <!-- end of div.avatar -->
                     <div class="tweet-header">
-                    <span class="name"><%= name %></span>
-                    <span class="location"><%= location %></span>
-                    <span class="time"><%= time %></span>
-                </div>
-                <div class="message"><%= msg %></div>
-                <div class="tweet-footer">
-                <img class="isFavorite" src="http://www.placehold.it/25x25">
-  <!-- <img class="isFavorite" src="<%= isFavorite %>"> -->
-                 <span>&lt favorite</span>
-                </div>
+                        <span class="name">Billy Bob Joe</span>
+                        <span class="location">Table Top Rock</span>
+                        <span class="time">30 Jan, 2014</span>
+                    </div>
+                    <div class="message">Wow, Table Top is such an amazing summit. We'll definitely come back next time!</div>
+                    <div class="tweet-footer">
+                        <img class="isFavorite" src="http://www.placehold.it/25x25">
+                <!-- <img class="isFavorite" src="<%= isFavorite %>"> -->
+                        <span>&lt favorite</span>
+                </div> <!-- end of the .tweet div -->
             </div> <!-- end of the tweets div -->
         </div> <!-- end of the .stream div -->
     </div>   <!--end of the backbox div -->
     </div> <!-- end of container div for the main page content -->
 </div> <!-- end of the .main div which is everything after the header div -->
 
+
+<script class="tweet-template" type="text/template">
+    <div class="tweet">
+        <div class="avatar">
+            <img class="avatar-pic" src="<%= avatar %>">
+        </div> // <!-- end of div.avatar -->
+        <div class="tweet-header">
+            <span class="name"><%= name %></span>
+            <span class="location"><%= location %></span>
+            <span class="time"><%= time %></span>
+        </div>
+        <div class="message"><%= msg %></div>
+        <div class="tweet-footer">
+            <img class="isFavorite" src="<%= isFavorite %>">
+            <span>&lt favorite</span>
+    </div> //<!-- end of the .tweet div -->
+</script>
 
 
 
