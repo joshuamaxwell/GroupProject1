@@ -206,6 +206,10 @@ body {
     
     .compose {
       height: 300px;
+      width: 690px;
+      margin: 0 auto;
+
+
 
       .composetitle {
         width: 690px;
@@ -217,12 +221,12 @@ body {
       }
 
       .share {
-          margin-top: 10px;
           height: 100px;
-          width: 625px;
+          width: 610px;
           text-align: left;
           color: gray;
           margin: 0 auto;
+          display: inline-block;
 
       }
 
@@ -292,7 +296,7 @@ body {
 /////////////// starting tweet styling
     .tweet {
       outline: 2px dashed black;
-      width: 610px;
+      width: 690px;
       height: 150px;
     }
     .tweet .avatar {
