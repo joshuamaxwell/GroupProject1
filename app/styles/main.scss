@@ -1,9 +1,18 @@
+$green: rgb(60, 80, 8);
+$litegreen: rgb(176, 197, 118);
+$tan: rgb(200, 201, 121);
+$gravel: rgb(214, 214, 197);
+$lime: rgb(179, 206, 63);
+
+
+
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   margin: 0px;
   padding: 0px;
+
 }
 .container {
   // outline: 1px dashed yellow;
@@ -186,6 +195,7 @@ body {
 
   .stream {
     outline: 1px dashed red;
+    background-color: $gravel;
     width: 690px;
     height: 100%; 
     margin-left: 16px; // to give the margin btw stream and sidebar
@@ -195,26 +205,44 @@ body {
 
     
     .compose {
-      outline: 1px dashed purple;
       height: 300px;
 
       .composetitle {
         width: 690px;
         height: 45px;
-        border: 1px solid green;
+        border: 1px solid $green;
         font-size: 28px;
+        color: $lime;
 
       }
 
       .share {
           margin-top: 10px;
-          height: 200px;
+          height: 100px;
           width: 625px;
           text-align: left;
           color: gray;
           margin: 0 auto;
 
       }
+
+      .sharebutton {
+        width: 140px;
+        height: 45px;
+        border: 2px solid $litegreen;
+        border-radius: 50px;
+        text-align: center;
+        margin: 0 auto;
+        color: $lime;
+        background-color: $green;
+        line-height: 40px;
+        box-shadow: 0 1px 0 1px $tan;
+
+      &.buttonshadow {
+        box-shadow: 0 2px 0 2px $tan;
+      }
+
+    }  // end of sharebutton
 
     } // end of .compose
 
