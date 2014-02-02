@@ -105,6 +105,7 @@ $(document).on('click', '.sharebutton', function() {
   var tweet = new Tweet(currentUser);
   tweetArray.push(tweet);
   $('.tweets').prepend( postTemplate(tweet) );
+  $('.share').val('');
   ++currentUser.numTweets;
   $('.tweetnum').text(currentUser.numTweets);
 });
@@ -136,6 +137,7 @@ $(document).on('click', '.isFavorite',  function() {
     }
 });
 
+
 function populateStream(num) {
   for( i = 0; i < num; i++) {
     randomUser = _.sample(userArray);
@@ -152,6 +154,8 @@ function setCurrentUser(user) {
   currentUser = user;
   $('.tweetnum').text(user.numTweets);
   $('.profpic img').attr("src", user.avatar);
+  $('.profname').text(user.name);
+  $('.proflocation').text(user.location);
   $('.sharelocation').val(user.location);
  return user;
 }
