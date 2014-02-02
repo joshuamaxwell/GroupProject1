@@ -105,3 +105,49 @@ $main-txt-color: #525252;
 
 }
 
+.profile {
+  height: 300px;
+  border: 2px solid $main-bg-color;
+  border-top: none;
+  background: rgba(247, 247, 247, 0.69);
+    .profpic {
+      border: 1px solid;
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      margin: 40px auto;
+    }
+    .profname {
+
+    }
+    .proflocation {
+
+    }
+ } 
+
+.posts {
+  outline: 1px dashed red;
+  height: 70px;
+  width: 290px;
+  margin: 0 auto;
+  top: 13%;
+    .tweetnum {
+      outline: 1px solid white;
+      display: inline-block;
+      height: 70px;
+      width: 90px;
+    }
+    .following {
+       outline: 1px solid white;
+       display: inline-block;
+       height: 70px;
+       width: 94px;
+    }
+    .followers {
+      outline: 1px solid white;
+      display: inline-block;
+      height: 70px;
+      width: 94px;
+    }
+}
+
