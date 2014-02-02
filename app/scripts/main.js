@@ -165,3 +165,41 @@ function tweetTimeFormat (date) {
     minutes = '0' + minutes;
   return hours + ":" + minutes;
 }
+
+
+
+// pop out compose button jquery
+
+$('.button').on('click', function() {
+  console.log('page will recede')
+  $('#page-wrap').toggleClass('dialogIsOpen');
+
+});
+
+$('.button').on('click', function() {
+  console.log('modal will open')
+  $('#myModal').toggleClass('dialogIsOpen');
+
+});
+
+$('.close').on('click', function() {
+  console.log('x button will return state')
+  $('#page-wrap').toggleClass('dialogIsOpen');
+  $('#myModal').toggleClass('dialogIsOpen');
+});
+
+$('.btn').on('click', function() {
+  console.log('close will return state')
+  $('#page-wrap').toggleClass('dialogIsOpen');
+  $('#myModal').toggleClass('dialogIsOpen');
+});
+
+$('.sharebutton').on('click', function() {
+  console.log('after submit will return state')
+  $('#page-wrap').toggleClass('dialogIsOpen');
+  $('#myModal').toggleClass('dialogIsOpen');
+});
+
+
+
+
