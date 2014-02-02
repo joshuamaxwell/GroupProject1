@@ -97,6 +97,25 @@
     </div>
 </div> <!-- end of pagewrap -->
 
+
+<script class="tweet-template" type="text/template">
+    <div class="tweet" id="<%= tweetID %>" userId="<%= userID %>">
+        <div class="avatar">
+            <img class="avatar-pic" src="<%= avatar %>">
+        </div>  <!-- end of div.avatar -->
+        <div class="tweet-header">
+            <span class="name"><%= name %></span>
+            <span class="location"><%= location %></span>
+            <span class="time"><%= time %></span>
+        </div>
+        <div class="message"><%= msg %></div>
+        <div class="tweet-footer">
+            <img class="isFavorite" src="<%= isFavorite %>">
+            <span>&lt favorite</span>
+    </div> <!-- end of the .tweet div -->
+</script>
+
+
 <div id="modal">
             <div id="myModal" class="modal hide fade"  role="dialog" aria-labelledby=" myModalLabel" aria-hidden="true">
                 <div class="modalheader">
