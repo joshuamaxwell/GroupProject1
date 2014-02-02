@@ -59,13 +59,13 @@
         <div class="stream">
             <div class="compose">
                 <div class="composetitle">Compose</div>
-                <input class="share" type="text" name="input" value="share">
-                <input class="sharelocation" type="text" name="input" value="location">
+                <input class="share" type="text" name="input" placeholder="share">
+                <input class="sharelocation" type="text" name="input" placeholder="location">
                 <div class="sharebutton">Share</div>
 
             </div>  <!-- end of compose -->
+            <div class="tweettitle">Your Stream</div>
             <div class="tweets">
-                <div class="tweettitle">Your Stream</div>
                 <!-- inside this tweets div will probably be where all of the templates get append() to -->
                 <div class="tweet">
                     <div class="avatar">
@@ -94,7 +94,7 @@
     <div class="tweet">
         <div class="avatar">
             <img class="avatar-pic" src="<%= avatar %>">
-        </div> // <!-- end of div.avatar -->
+        </div>  <!-- end of div.avatar -->
         <div class="tweet-header">
             <span class="name"><%= name %></span>
             <span class="location"><%= location %></span>
@@ -104,13 +104,14 @@
         <div class="tweet-footer">
             <img class="isFavorite" src="<%= isFavorite %>">
             <span>&lt favorite</span>
-    </div> //<!-- end of the .tweet div -->
+    </div> <!-- end of the .tweet div -->
 </script>
 
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
+        <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/jquery/jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
