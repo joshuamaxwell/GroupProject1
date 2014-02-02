@@ -4,6 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>groupProject1</title>
@@ -27,69 +28,74 @@
 
 
 <!-- Just as an example -->
-
-<div class="header">
-  <div class="container">
-    <span class="home">home</span>
-    <div class="logo">
+<div id="page-wrap">
+    <div class="header">
+      <div class="container">
+        <span class="home">home</span>
+        <div class="logo">
+        </div>
+        <input class="search" type="text" name="input" value    ="search">
+      </div>
     </div>
-    <input class="search" type="text" name="input" value="search">
-  </div>
-</div>
-
-
-<div class="main">
-    <div class="container">
-        <div class="backbox">
-            <div class="sidebar">
-                <div class="top">
-                <h3>Trails</h3>
-                </div>
-                <div class="profile">
-                    <div class="profpic">
-                        <img src="">
+    
+    
+    <div class="main">
+        <div class="container">
+            <div class="backbox">
+                <div class="sidebar">
+                    <div class="top">
+                    <h3>Trails</h3>
                     </div>
-                        <div class="posts">
-                            <div class="tweetnum"></div>
-                         <div class="following"></div>
-                            <div class="followers"></div>
-                        </div> 
-                </div>       <!-- end of posts -->
-                <div class="links"></div>
-            </div> <!-- end of .sidebar div -->
-        
-        <div class="stream">
-            <div class="compose">
-                <div class="composetitle">Compose</div>
-                <input class="share" type="text" name="input" placeholder="share">
-                <input class="sharelocation" type="text" name="input" placeholder="location">
-                <div class="sharebutton">Share</div>
-
-            </div>  <!-- end of compose -->
-            <div class="tweettitle">Your Stream</div>
-            <div class="tweets">
-                <!-- inside this tweets div will probably be where all of the templates get append() to -->
-                <div class="tweet">
-                    <div class="avatar">
-                        <img class="avatar-pic" src="http://www.lorempixel.com/150/150/people">
-          <!--       <img class="avatar-pic" src="<%= avatar %>"> -->
-                    </div> <!-- end of div.avatar -->
-                    <div class="tweet-header">
-                        <span class="name">Billy Bob Joe</span>
-                        <span class="location">Table Top Rock</span>
-                        <span class="time">30 Jan, 2014</span>
+                    <div class="profile">
+                        <div class="profpic"></div>
+                            <div class="posts">
+                                <div class="tweetnum"></div>
+                             <div class="following"></div>
+                                <div class="followers"></div    >
+                            </div> 
+                    </div>       <!-- end of posts -->
+                    <div class="links"></div>
+                </div> <!-- end of .sidebar div -->
+            
+            <div class="stream">
+                <div class="compose">
+                    <div class="composetitle">Compose</div>
+    <div class="button"
+    <a href="#myModal" role="button" class="btn" data-toggle    ="modal">Share</a>
+    </div>
+    
+    
+     
+    
+    
+    
+                </div>  <!-- end of compose -->
+                <div class="tweets">
+                    <div class="tweettitle">Your Stream</div    >
+                    <!-- inside this tweets div will    probably be where all of the templates     get append() to -->
+                    <div class="tweet">
+                        <div class="avatar">
+                        <img class="avatar-pic" src="   http://www.lorempixel. com/150/150/people">
+        <!--       <img class="avatar-pic" src="<%= avatar %>"> -->
+                         </div> <!-- end of div.avatar -->
+                        <div class="tweet-header">
+                        <span class="name"><%= name %></span>
+                        <span class="location"><%= location     %></span>
+                        <span class="time"><%= time %></span>
                     </div>
-                    <div class="message">Wow, Table Top is such an amazing summit. We'll definitely come back next time!</div>
+                    <div class="message"><%= msg %></div>
                     <div class="tweet-footer">
-                        <img class="isFavorite" src="http://www.placehold.it/25x25">
-                <!-- <img class="isFavorite" src="<%= isFavorite %>"> -->
-                        <span>&lt favorite</span>
-                </div> <!-- end of the .tweet div -->
-            </div> <!-- end of the tweets div -->
-        </div> <!-- end of the .stream div -->
-    </div>   <!--end of the backbox div -->
-    </div> <!-- end of container div for the main page content -->
-</div> <!-- end of the .main div which is everything after the header div -->
+                    <img class="isFavorite" src="http://www.    placehold.it/25x25">
+      <!-- <img class="isFavorite" src="<%= isFavorite %>">     -->
+                     <span>&lt favorite</span>
+                    </div>
+                </div> <!-- end of the tweets div -->
+            </div> <!-- end of the .stream div -->
+        </div>   <!--end of the backbox div -->
+        </div> <!-- end of container div for the main page  content -->
+    </div> <!-- end of the .main div which is everything    after the header div -->
+    </div>
+</div> <!-- end of pagewrap -->
 
 
 <script class="tweet-template" type="text/template">
@@ -110,11 +116,30 @@
 </script>
 
 
+<div id="modal">
+            <div id="myModal" class="modal hide fade"  role="dialog" aria-labelledby=" myModalLabel" aria-hidden="true">
+                <div class="modalheader">
+                    <button type="button" class="close" data-toggle="modal">×</button>
+                </div>
+                <div class="modalbody">
+                    <input class="share" type="text" name=" input" value="share">
+                    <input class="sharelocation" type="text"     name="input" value="location">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-toggle="modal">Modal</button>
+                    <button class="sharebutton"data-toggle="modal">Submit</button>
+                </div>
+            </div>    
+    
+        <!-- modal box content -->
+</div> <!-- end id modal -->
+    
+
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -131,5 +156,6 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
 </body>
 </html>

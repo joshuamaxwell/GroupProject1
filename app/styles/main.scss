@@ -4,7 +4,19 @@ $tan: rgb(200, 201, 121);
 $gravel: rgb(214, 214, 197);
 $lime: rgb(179, 206, 63);
 
+#page-wrap {
 
+  &.dialogIsOpen {
+
+  /* Blur and de-color */
+  -webkit-filter: blur(5px) grayscale(50%);
+
+  /* Recede */
+  -webkit-transform: scale(0.9);
+  -webkit-transition: all 0.4s ease;
+}
+
+}
 
 body {
   background: #fafafa;
@@ -12,13 +24,15 @@ body {
   color: #333;
   margin: 0px;
   padding: 0px;
-
 }
+
 .container {
   // outline: 1px dashed yellow;
   width: 1000px;
   margin: 0 auto;
 } // end of .container
+
+
 
 
 
@@ -218,41 +232,35 @@ body {
         height: 45px;
         border: 1px solid $green;
         font-size: 28px;
-        color: $lime;
+        color: #525252;
 
       }
-
-      .share {
-          height: 100px;
-          width: 610px;
-          text-align: left;
-          color: gray;
-          margin: 0 auto;
-          display: inline-block;
-
-      }
-
-      .sharebutton {
-        width: 140px;
-        height: 45px;
-        border: 2px solid $litegreen;
-        border-radius: 50px;
-        text-align: center;
-        margin: 0 auto;
-        color: $lime;
-        background-color: $green;
-        line-height: 40px;
-        box-shadow: 0 1px 0 1px $tan;
-
-      &.buttonshadow {
-        box-shadow: 0 2px 0 2px $tan;
-      }
-
-    }  // end of sharebutton
 
     } // end of .compose
 
-    .tweets {
+
+.button {
+  background: rgb(60,80,8); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(60,80,8,1)), color-stop(100%,rgba(124,188,10,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(60,80,8,1) 0%,rgba(124,188,10,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to bottom, rgba(60,80,8,1) 0%,rgba(124,188,10,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c5008', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+  width: 200px;
+  height: 75px;
+  border: 2px solid $litegreen;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 auto;
+  color: $lime;
+  line-height: 65px;
+  box-shadow: inset 0 1px 0 1px #525252;
+  text-shadow:1px 1px 0px #aade7c;
+  font-size: 40px;
+
+}
+
+
+  .tweets {
       outline: 1px dashed purple;
       vertical-align: top;
 
@@ -290,7 +298,7 @@ body {
 
     } // end of .tweets
 
-  } // end of .strem
+  } // end of .stream
   
 } // end of .main
 
@@ -322,5 +330,76 @@ body {
 
    
 
+#myModal {
+  background-color: #fff;
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  margin: -15% 0 0 -25%;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.5);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
+
+  &.dialogIsOpen {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+
+
+  .modalheader {
+    height: 45px;
+  
+  }
+
+  .close {
+    pointer-events: auto;    
+
+  }
+
+  .btn {
+    pointer-events: auto;
+  }
+
+  .modalbody {
+    max-height: 245px;
+    width: 550px;
+
+    .share {
+          height: 100px;
+          width: 610px;
+          text-align: left;
+          color: gray;
+          margin: 0 auto;
+          display: inline-block;
+
+      }
+
+      .sharebutton {
+        width: 140px;
+        height: 45px;
+        border: 2px solid $litegreen;
+        border-radius: 50px;
+        text-align: center;
+        margin: 0 auto;
+        color: $lime;
+        background-color: $green;
+        line-height: 40px;
+        box-shadow: 0 1px 0 1px $tan;
+
+    } 
+  
+  }
+
+  .modalfooter {
+    height: 45px;
+  }
+
+}
     
 
