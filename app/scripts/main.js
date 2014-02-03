@@ -3,23 +3,23 @@ var favoriteFalse = 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTqXNi
 var favoriteTrue = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU_nAnDq8S6OHyLravOoWgEY0JYoevXn691p1kti4XQH12hPihOg'
 
 var users = [{
-    name: "Billy Bob Joe",
+    name: "Billy Joe",
     location: "Table Top Rock",
     avatar: "http://www.lorempixel.com/150/150/people/3",
 }, {
-    name: "Sally Sue Milly",
+    name: "Sally Milly",
     location: "Bald Face Pointe",
     avatar: "http://www.lorempixel.com/150/150/people/4",
 }, {
-    name: "Mandy Nichole Miller",
+    name: "Mindy Mills",
     location: "Cresent Head Bluff",
     avatar: "http://www.lorempixel.com/150/150/people/5",
 }, {
-    name: "Jilly Carson Blithe",
+    name: "Jilly Blithe",
     location: "Crappy Creek",
     avatar: "http://www.lorempixel.com/150/150/people/6",
 }, {
-    name: "Arthur Bradley Thompson",
+    name: "Art Toms",
     location: "Pointy Bald Table Bluff",
     avatar: "http://www.lorempixel.com/150/150/people/7",
 }];
@@ -50,6 +50,8 @@ var UserProfile = function(object) {
     this.location = object.location;
     this.avatar = object.avatar;
     this.numTweets = 0;
+    this.following = [];
+    this.trails = [];
 }
 
 userArray = [];
@@ -86,7 +88,15 @@ _.each(users, function(user) {
 });
 // give the example users a certain number of tweets
 _.each(userArray, function(e) {
-    e.numTweets = _.random(400);
+    e.numTweets = _.random(400); //give each example user a random number of tweets to START from
+    var locationsVisited = _.sample(locations, _.random(locations.length)); // give each user a random number of locaitons they've visited
+    _.each(locationsVisited, function (location) { 
+        e.trails.push( location );
+    });
+    var following = _.sample(userArray, _.random(userArray.length));
+    _.each(following, function (user){
+        e.following.push( user.userID );
+    });
 });
 
 // fill up the page with sample data
@@ -94,6 +104,16 @@ populateStream(50);
 
 // set the current user to a random example user
 var currentUser = setCurrentUser(_.sample(userArray));
+
+// here begins the javascript to change the current profile upon clicking the name in the list
+$(document).on('click', 'li.profile-chooser-row', function(){
+    var clickedUserID = $(this).attr("id");
+    console.log(clickedUserID);
+    var clickedUser = _.find(userArray, function(e) {
+        return e.userID == clickedUserID;
+    });
+    setCurrentUser(clickedUser);
+});
 
 
 
@@ -105,9 +125,8 @@ $(document).on('click', '.sharebutton', function() {
     $('.tweets').prepend(postTemplate(tweet));
     $('.share').val('');
     ++currentUser.numTweets;
-    $('.tweetnum').text(currentUser.numTweets);
+    $('.tweetnum > .num').text(currentUser.numTweets);
 });
-
 
 //All of this javascript is to mark the tweets as favoriteTrue or favoriteFalse in both the DOM and the array
 $(document).on('click', '.isFavorite', function() {
@@ -149,7 +168,9 @@ function populateStream(num) {
 
 function setCurrentUser(user) {
     currentUser = user;
-    $('.tweetnum').text(user.numTweets);
+    $('.tweetnum > .num').text(user.numTweets);
+    $('.following > .num').text(user.following.length);
+    $('.locations > .num').text(user.trails.length);
     $('.profpic img').attr("src", user.avatar);
     $('.profname').text(user.name);
     $('.proflocation').text(user.location);
@@ -168,8 +189,9 @@ function tweetTimeFormat(date) {
 }
 
 function registerNewUser(user) {
-    userArray.push(new UserProfile(user));
-    $('.profile-chooser-rows').append(userRowTemplate(user));
+    newUser = new UserProfile(user);
+    userArray.push(newUser);
+    $('.profile-chooser-rows').append(userRowTemplate(newUser));
 }
 
 
