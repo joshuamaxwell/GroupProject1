@@ -106,6 +106,10 @@ populateStream(50);
 var currentUser = setCurrentUser(_.sample(userArray));
 
 // here begins the javascript to change the current profile upon clicking the name in the list
+$(document).on('click', '.profile-chooser', function() {
+    $('.profile-chooser > ul').toggleClass('hidden');
+});
+
 $(document).on('click', 'li.profile-chooser-row', function() {
     var clickedUserID = $(this).attr("id");
     console.log(clickedUserID);
@@ -175,6 +179,8 @@ function setCurrentUser(user) {
     $('.profname').text(user.name);
     $('.proflocation').text(user.location);
     $('.sharelocation').val(user.location);
+    $('.profile-chooser > .avatar > img').attr("src", user.avatar);
+    $('.profile-chooser > .name').text(user.name);
     return user;
 }
 

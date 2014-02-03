@@ -4,6 +4,8 @@ $tan: rgb(200, 201, 121);
 $gravel: rgb(214, 214, 197);
 $lime: rgb(179, 206, 63);
 
+@import "compass";
+
 #page-wrap {
 
   &.dialogIsOpen {
@@ -24,6 +26,10 @@ body {
   color: #333;
   margin: 0px;
   padding: 0px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -62,6 +68,7 @@ $main-txt-color: #525252;
   height: 40px;
   top: 0;
   border-bottom: 1px solid #B1B18A;
+  z-index: 20;
   .home {
     display: inline-block;
     margin: 10px auto;
@@ -88,16 +95,77 @@ $main-txt-color: #525252;
         .logo:hover {
           border-bottom: 17px solid rgba(82, 82, 82, 0.6);
         }
-          .search {
-            float: right;
-            margin-top: 10px;
-            height: 13px;
-            width: 120px;
-            border-radius: 10px;
-            padding-left: 10px;
-            text-align: left;
-            color: gray;
-          }    
+
+
+        .profile-chooser { //this used to be the .search class 
+          border-left: 1px solid #B1B18A;
+          border-right: 1px solid #B1B18A;
+          float: right;
+          margin: 0px;
+          height: 40px;
+          width: 180px;
+          text-align: left;
+          color: gray;
+
+          .avatar {
+            margin: 5px 15px;
+            vertical-align: middle;
+            display: inline-block;
+            @include border-radius(50%);
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            
+            img {
+              width: 30px;
+            } // end of img
+
+          } // end of .avatar
+
+          ul {
+            list-style-type: none;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 20px;
+            margin-top: 1px;
+            @include single-transition(all, 0.3s, ease-in-out);
+            overflow: hidden;
+            height: 210px;
+
+            &.hidden{
+              height: 0px;
+              opacity: 0;
+            }
+
+            li {
+              margin-left: -5px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              border-bottom: 1px solid $main-txt-color;
+
+              .chooser-avatar {
+                vertical-align: middle;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                @include border-radius(50%);
+                overflow: hidden;
+
+                img {
+                  width: 30px;
+                }
+
+              } // end of .chooser-avatar
+              .chooser-name {
+                margin-left: 10px;
+                display: inline-block;
+              } //end of .chooser-name
+
+            } // end of li
+
+          } // end of ul
+
+
+        }  // end of .profile-chooser  
 
 } // end of .header
 

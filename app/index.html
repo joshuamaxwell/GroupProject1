@@ -31,14 +31,25 @@
 <div id="page-wrap">
   <div class="header">
     <div class="container">
-      <span class="home">home</span>
-      <div class="logo">
-      </div>
-      <input class="search" type="text" name="input" placeholder="search">
-    </div>
+        <a href="#page-top">
+          <span class="home">trails</span>
+        </a>
+        <a href="#page-top">
+          <div class="logo"></div>
+        </a>
+        <div class="profile-chooser">
+          <div class="avatar">
+            <img src="http://www.lorempixel.com/150/150/people/8">
+          </div>
+          <span class="name">Current User</span>
+            <ul class="profile-chooser-rows hidden">
+                  <!-- the li elements from the template will be appended here using javascript -->
+            </ul>
+        </div> <!-- end of .profile-chooser div-->      
+    </div> <!-- end .container class of the .header div -->
   </div> 
 
-  <div class="main">
+  <div class="main" id="page-top">
    <div class="backbox">
     <div class="container">
       <div class="sidebar">
@@ -107,12 +118,6 @@
     
 
 
-<!-- cut/paster .profile-chooser into the header area that we want the list to appear in -->
-<div class="profile-chooser">
-    <ul class="profile-chooser-rows">
-          <!-- the li elements from the template will be appended here using javascript -->
-    </ul>
-</div> <!-- end of .profile-chooser div. this div needs to be cut/pasted up into the header -->
 
 <div id="modal">
             <div id="myModal" class="modal hide fade"  role="dialog" aria-labelledby=" myModalLabel" aria-hidden="true">
@@ -154,7 +159,7 @@
         <div class="chooser-avatar">
             <img src="<%= avatar %>">
         </div>
-        <h3 class="chooser-name"><%= name %></h3>
+        <span class="chooser-name"><%= name %></span>
     </li>
 </script>
     
