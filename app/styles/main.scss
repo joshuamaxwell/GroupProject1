@@ -216,9 +216,7 @@ $main-txt-color: #525252;
 ////////////////here begins the styling for the .stream section
 
   .stream {
-    background-color: $gravel;
-    width: 690px;
-    height: 100%; 
+    width: 690px; 
     margin-left: 16px; // to give the margin btw stream and sidebar
     vertical-align: top;
     display: inline-block;
@@ -262,6 +260,7 @@ $main-txt-color: #525252;
 }
 
  .four {  //formally tweettitle
+        margin-top: 40px;
         width: 690px;
         height: 45px;
         border: 1px solid green;
@@ -308,31 +307,30 @@ $main-txt-color: #525252;
 
 
 /////////////// starting tweet styling
-    .tweet {
-      outline: 2px dashed black;
-      width: 690px;
-      height: 150px;
-    }
-    .tweet .avatar {
-      outline: 1px dashed purple;
-      overflow: hidden;
-      width: 130px;
-      height: 130px;
-      margin: 10px;
-      border-radius: 130px;
-      float: left;
-    }
 
-    
+.tweet {
+  // margin-top: 45px;
+  outline: 2px dashed black;
+  // background: rgba(241, 228, 228, 0.75);
+  width: 690px;
+  height: 150px;
+   .avatar {
+  // outline: 1px dashed purple;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 100%;
+  float: left;
+  }
+  .message {
+  // outline: 1px dashed lime;
+  height: 80px;
+  padding: 10px;
+  }
+}
 
-    .tweet .message {
-      outline: 1px dashed lime;
-      height: 80px;
-      background: white;
-      padding: 10px;
-    }
 
-   
 
 #myModal {
   background-color: #fff;
