@@ -123,6 +123,14 @@ $main-txt-color: #525252;
             background: rgba(255, 255, 255, 0.9);
             padding: 5px 20px;
             margin-top: 1px;
+            @include single-transition(all, 0.3s, ease-in-out);
+            overflow: hidden;
+            height: 210px;
+
+            &.hidden{
+              height: 0px;
+              opacity: 0;
+            }
 
             li {
               margin-left: -5px;
