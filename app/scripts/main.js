@@ -175,6 +175,8 @@ function setCurrentUser(user) {
     $('.profname').text(user.name);
     $('.proflocation').text(user.location);
     $('.sharelocation').val(user.location);
+    $('.profile-chooser > .avatar > img').attr("src", user.avatar);
+    $('.profile-chooser > .name').text(user.name);
     return user;
 }
 
