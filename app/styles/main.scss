@@ -105,7 +105,11 @@ $main-txt-color: #525252;
           height: 40px;
           width: 180px;
           text-align: left;
-          color: gray;
+          color: rgba(15, 15, 15, 0.5);
+
+          &:hover {
+            background: gray;
+          }
 
           .avatar {
             margin: 5px 15px;
@@ -129,7 +133,7 @@ $main-txt-color: #525252;
             margin-top: 1px;
             @include single-transition(all, 0.3s, ease-in-out);
             overflow: hidden;
-            height: 210px;
+            height: 235px;
 
             &.hidden{
               height: 0px;
@@ -140,7 +144,16 @@ $main-txt-color: #525252;
               margin-left: -5px;
               margin-top: 10px;
               margin-bottom: 10px;
+              padding-bottom: 6px;
               border-bottom: 1px solid $main-txt-color;
+
+              &:hover .chooser-name{
+                color: $main-bg-color;
+              }
+
+              &:last-child {
+                border-bottom: none;
+              }
 
               .chooser-avatar {
                 vertical-align: middle;
