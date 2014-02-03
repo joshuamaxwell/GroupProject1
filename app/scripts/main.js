@@ -1,6 +1,6 @@
 //Replace the following two urls with our desired icon urls for favorite or not favorite
-var favoriteFalse = 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTqXNizOUNwsKmN0nJ4D0Ac9FgEbL4aNFtVYxjWaS3vSIj06bfmkw'
-var favoriteTrue = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU_nAnDq8S6OHyLravOoWgEY0JYoevXn691p1kti4XQH12hPihOg'
+var favoriteFalse = 'images/fire.svg'
+var favoriteTrue = 'images/firegold.svg'
 
 var users = [{
     name: "Billy Joe",
@@ -106,6 +106,10 @@ populateStream(50);
 var currentUser = setCurrentUser(_.sample(userArray));
 
 // here begins the javascript to change the current profile upon clicking the name in the list
+$(document).on('click', '.profile-chooser', function() {
+    $('.profile-chooser > ul').toggleClass('hidden');
+});
+
 $(document).on('click', 'li.profile-chooser-row', function() {
     var clickedUserID = $(this).attr("id");
     console.log(clickedUserID);
@@ -175,6 +179,8 @@ function setCurrentUser(user) {
     $('.profname').text(user.name);
     $('.proflocation').text(user.location);
     $('.sharelocation').val(user.location);
+    $('.profile-chooser > .avatar > img').attr("src", user.avatar);
+    $('.profile-chooser > .name').text(user.name);
     return user;
 }
 

@@ -1,3 +1,6 @@
+@import "compass";
+
+
 #page-wrap {
 
   &.dialogIsOpen {
@@ -18,6 +21,10 @@ body {
   color: #333;
   margin: 0px;
   padding: 0px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -56,6 +63,7 @@ $main-txt-color: #525252;
   height: 40px;
   top: 0;
   border-bottom: 1px solid #B1B18A;
+  z-index: 20;
   .home {
     display: inline-block;
     margin: 10px auto;
@@ -82,16 +90,77 @@ $main-txt-color: #525252;
         .logo:hover {
           border-bottom: 17px solid rgba(82, 82, 82, 0.6);
         }
-          .search {
-            float: right;
-            margin-top: 10px;
-            height: 13px;
-            width: 120px;
-            border-radius: 10px;
-            padding-left: 10px;
-            text-align: left;
-            color: gray;
-          }    
+
+
+        .profile-chooser { //this used to be the .search class 
+          border-left: 1px solid #B1B18A;
+          border-right: 1px solid #B1B18A;
+          float: right;
+          margin: 0px;
+          height: 40px;
+          width: 180px;
+          text-align: left;
+          color: gray;
+
+          .avatar {
+            margin: 5px 15px;
+            vertical-align: middle;
+            display: inline-block;
+            @include border-radius(50%);
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            
+            img {
+              width: 30px;
+            } // end of img
+
+          } // end of .avatar
+
+          ul {
+            list-style-type: none;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 20px;
+            margin-top: 1px;
+            @include single-transition(all, 0.3s, ease-in-out);
+            overflow: hidden;
+            height: 210px;
+
+            &.hidden{
+              height: 0px;
+              opacity: 0;
+            }
+
+            li {
+              margin-left: -5px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              border-bottom: 1px solid $main-txt-color;
+
+              .chooser-avatar {
+                vertical-align: middle;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                @include border-radius(50%);
+                overflow: hidden;
+
+                img {
+                  width: 30px;
+                }
+
+              } // end of .chooser-avatar
+              .chooser-name {
+                margin-left: 10px;
+                display: inline-block;
+              } //end of .chooser-name
+
+            } // end of li
+
+          } // end of ul
+
+
+        }  // end of .profile-chooser  
 
 } // end of .header
 
@@ -230,7 +299,7 @@ $main-txt-color: #525252;
 
       }
 
-    } // end of .compose
+    } 
 
 .expand {
   background: gba(247, 247, 247, 0.69);
@@ -269,43 +338,10 @@ $main-txt-color: #525252;
         margin-top: 40px;
         width: 690px;
         height: 45px;
-        border: 1px solid green;
         font-size: 22px;
       
       }
 
-
-  .tweets {
-      outline: 1px dashed purple;
-      vertical-align: top;
-      border: 4px solid $main-bg-color;
-      background: rgba(247, 247, 247, 0.69);
-
-
-
-    .tweet .tweet-header {
-      outline: 1px dashed lime;
-      display: inline-block;
-      background: grey;
-      height: 25px;
-      line-height: 25px;
-    }
-
-  
-
-    .tweet .tweet-footer {
-      display: inline-block;
-      background: grey;
-      height: 25px;
-      line-height: 25px;
-    }
-
-    .tweet-footer img {
-      float: left;
-    }
-
-
-    } // end of .tweets
 
   } // end of .stream
   
@@ -315,25 +351,63 @@ $main-txt-color: #525252;
 /////////////// starting tweet styling
 
 .tweet {
-  // margin-top: 45px;
-  outline: 2px dashed black;
-  // background: rgba(241, 228, 228, 0.75);
-  width: 690px;
+  border-right: 4px solid $main-bg-color;
+  border-left: 4px solid $main-bg-color;
+  border-bottom: 1px solid $main-bg-color;
+  width: 682px;
   height: 150px;
+  position: relative;
+  z-index: 10;
+   .tweet-header {
+    padding-top: 35px;
+   }
+    .name {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      padding-right: 10px;
+      color: $main-txt-color;
+    }
+    .location{
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: lighter;
+      font-size: 15px;
+      padding-right: 10px; 
+      letter-spacing: 1px;
+      color: $main-txt-color;
+    }
    .avatar {
-  // outline: 1px dashed purple;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  margin: 10px;
-  border-radius: 100%;
-  float: left;
+      overflow: hidden;
+      width: 90px;
+      height: 90px;
+      margin: 25px;
+      border-radius: 100%;
+      float: left;
   }
+
+  .avatar-pic {
+    width: 90px;
+  }
+  
   .message {
-  // outline: 1px dashed lime;
-  height: 80px;
-  padding: 10px;
+    width: 419px;
+    height: 67px;
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    overflow-x: hidden;
   }
+  .tweet-footer {
+    position: absolute;
+    right: 17px;
+    bottom: 11px;
+  }
+    .isFavorite {
+      width: 32px;
+      bottom: -3px;
+      right: 54px;
+      position: absolute;
+    }
 }
 
 
