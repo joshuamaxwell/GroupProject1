@@ -4,6 +4,8 @@ $tan: rgb(200, 201, 121);
 $gravel: rgb(214, 214, 197);
 $lime: rgb(179, 206, 63);
 
+@import "compass";
+
 #page-wrap {
 
   &.dialogIsOpen {
@@ -97,7 +99,18 @@ $main-txt-color: #525252;
           padding-left: 10px;
           text-align: left;
           color: gray;
-        }    
+
+          .avatar {
+            @include border-radius(50%);
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            img {
+              width: 30px;
+            }
+          }
+
+        }  // end of .profile-chooser  
 
 } // end of .header
 
