@@ -106,6 +106,7 @@ $main-txt-color: #525252;
           width: 180px;
           text-align: left;
           color: rgba(15, 15, 15, 0.5);
+          cursor: pointer;
 
           &:hover {
             background: gray;
@@ -146,6 +147,7 @@ $main-txt-color: #525252;
               margin-bottom: 10px;
               padding-bottom: 6px;
               border-bottom: 1px solid $main-txt-color;
+              cursor: pointer;
 
               &:hover .chooser-name{
                 color: $main-bg-color;
