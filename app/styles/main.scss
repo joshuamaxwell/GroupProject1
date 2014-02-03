@@ -153,6 +153,7 @@ $main-txt-color: #525252;
       border-radius: 100%;
       margin: 20px auto;
       border: 2px solid $main-bg-color;
+      overflow: hidden; 
     }
     .profname {
       margin: 0 36px;
