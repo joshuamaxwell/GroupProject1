@@ -32,8 +32,24 @@ body {
   margin: 0 auto;
 } // end of .container
 
+$main-bg-color: #D6D6C5;
+$main-txt-color: #525252;
 
+.discript {
+  width: 100%;
+  display: inline-block;
+  margin: 8px 7px;
+  font-size: 1.0em;
+  font-family: georgia;
+  font-style: italic;
+}
 
+.num {
+  margin: 1px 8px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
 
 
@@ -41,24 +57,20 @@ body {
 
 .header {
   position: fixed;
-  background: #D6D6C5;
+  background: $main-bg-color;
   width: 100%;
   height: 40px;
   top: 0;
   border-bottom: 1px solid #B1B18A;
-
-
-    .home {
-      display: inline-block;
-      margin: 10px auto;
-      color: #525252;
-      font-size: 18px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: bold;
-
-    }
-
+  .home {
+    display: inline-block;
+    margin: 10px auto;
+    color: $main-txt-color;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
     .home:hover{
       color: rgba(82, 82, 82, 0.6);
       border-bottom: 4px solid rgba(82, 82, 82, 0.6);
@@ -70,28 +82,22 @@ body {
         width: 0; 
         height: 0; 
         border-left: 13px solid transparent;
-        border-right: 13px solid transparent;
-        
+        border-right: 13px solid transparent;   
         border-bottom: 17px solid #525252;
-        // height: 20px;
-        // background: #FFF;
       }      
-
-      .logo:hover{
-        border-bottom: 17px solid rgba(82, 82, 82, 0.6);
-      }
-
-        .search {
-          float: right;
-          margin-top: 10px;
-          height: 13px;
-          width: 120px;
-          border-radius: 10px;
-          padding-left: 10px;
-          text-align: left;
-          color: gray;
-
-        }    
+        .logo:hover {
+          border-bottom: 17px solid rgba(82, 82, 82, 0.6);
+        }
+          .search {
+            float: right;
+            margin-top: 10px;
+            height: 13px;
+            width: 120px;
+            border-radius: 10px;
+            padding-left: 10px;
+            text-align: left;
+            color: gray;
+          }    
 
 } // end of .header
 
@@ -99,113 +105,113 @@ body {
 
 
 /////////////// here begins the styling for the .main section
+
 .main {
-  outline: 1px dashed lime;
-  margin-top: 120px;
+  margin-top: 80px;
+  .backbox {
+    width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(241, 228, 228, 0.05);
+  }
 
-.backbox {
-  width: 1050px;
-  height: 100%;
-  margin: 0 auto;
-  outline: 1px dashed black;
-  background: rgba(241, 228, 228, 0.35);
-
-}
 
 
 /////////////////////////// here begins the styling for the .sidebar section
-  .sidebar {
-    outline: 1px dashed red;
-    width: 290px;
-    vertical-align: top;
-    display: inline-block;
-    margin-left: 16px;
+.sidebar {
+  width: 290px;
+  vertical-align: top;
+  display: inline-block;
+}
 
-
-    .top{
-      width: 290px;
-      height: 50px;
-      background: #333;
-      color: #FFF;
-      margin: 0;
+.top {
+  width: 290px;
+  height: 35px;
+  background: $main-bg-color;
+  color: #FFF;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+  h3 {
+      margin: 0 auto;
+      text-align: center;
+      line-height: 35px;
+      color: $main-txt-color;
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: bold;  
     }
-      h3 {
-        margin: 0 auto;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 50px;
+}
+
+.outerbox {
+  height: 280px;
+  border: 4px solid $main-bg-color;
+  background: rgba(247, 247, 247, 0.69);
+    .profpic {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      margin: 20px auto;
+      border: 2px solid $main-bg-color;
+      overflow: hidden; 
+    }
+    .profname {
+      margin: 0 36px;
+      text-transform: uppercase;
+      color: #525252;
+      text-align: center;
+      letter-spacing: 2px;
+      border-bottom: 3px solid #525252;
+      padding-bottom: 7px;
+    }
+    .proflocation {
+      margin: 9px 33px;
+      text-align: center;
+      font-weight: lighter;
+      color: $main-txt-color;
+      letter-spacing: 2px;
+    }
+      .proflocation:hover {
+        font-style: italic;
       }
-
-    .profile {
-      outline: 1px dashed purple;
-      height: 300px;
-      border: 2px solid gray;
-      background: rgba(128, 128, 128, 0.83);
+ } 
 
 
-    } 
-
-  .profpic {
-    outline: 1px dashed blue;
-    width: 200px;
-    height: 190px;
-    margin: 0 auto;
-    top: 12%;
-  
-
-  }
-
-
-  .posts {
-    outline: 1px dashed red;
-    height: 70px;
-    width: 290px;
-    margin: 0 auto;
-    top: 13%;
-
-  }
-
+.posts {
+  height: 70px;
+  width: 282px;
+  margin: 0 auto;  
+  border-right: 4px solid $main-bg-color;
+  border-left: 4px solid $main-bg-color;
+  border-bottom: 4px solid $main-bg-color;
+  color: $main-txt-color;
   .tweetnum {
-    outline: 1px solid white;
     display: inline-block;
     height: 70px;
     width: 90px;
-
-
-  }
-
+    border-right: 4px solid $main-bg-color;
+    padding-left: 2px;
+  } 
   .following {
-     outline: 1px solid white;
-     display: inline-block;
-     height: 70px;
-     width: 94px;
-
-
-  }
-
-  .followers {
-    outline: 1px solid white;
     display: inline-block;
     height: 70px;
-    width: 94px;
-
+    width: 90px;
+    border-right: 4px solid $main-bg-color;
+  }  
+  .locations {
+    display: inline-block;
+    height: 70px;
+    width: 84px;
   }
+}
 
+.links {
+  margin-top: 40px;
+}
 
-
-
-    // end of .profile
-
-    .links {
-      outline: 1px dashed purple;
-      height: 500px;
-
-    } // end of .links
-
-  } // end of .sidebar
-
-
-
+.two {
+  height: 500px
+}
 
 ////////////////here begins the styling for the .stream section
 
@@ -402,4 +408,5 @@ body {
 
 }
     
+
 
