@@ -90,12 +90,12 @@ _.each(users, function(user) {
 _.each(userArray, function(e) {
     e.numTweets = _.random(400); //give each example user a random number of tweets to START from
     var locationsVisited = _.sample(locations, _.random(locations.length)); // give each user a random number of locaitons they've visited
-    _.each(locationsVisited, function (location) { 
-        e.trails.push( location );
+    _.each(locationsVisited, function(location) {
+        e.trails.push(location);
     });
     var following = _.sample(userArray, _.random(userArray.length));
-    _.each(following, function (user){
-        e.following.push( user.userID );
+    _.each(following, function(user) {
+        e.following.push(user.userID);
     });
 });
 
@@ -106,7 +106,7 @@ populateStream(50);
 var currentUser = setCurrentUser(_.sample(userArray));
 
 // here begins the javascript to change the current profile upon clicking the name in the list
-$(document).on('click', 'li.profile-chooser-row', function(){
+$(document).on('click', 'li.profile-chooser-row', function() {
     var clickedUserID = $(this).attr("id");
     console.log(clickedUserID);
     var clickedUser = _.find(userArray, function(e) {
