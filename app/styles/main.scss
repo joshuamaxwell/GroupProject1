@@ -12,7 +12,7 @@ $lime: rgb(179, 206, 63);
   -webkit-filter: blur(5px) grayscale(50%);
 
   /* Recede */
-  -webkit-transform: scale(1);
+  -webkit-transform: scale(1.02);
   -webkit-transition: all 0.4s ease;
 }
 
@@ -238,24 +238,39 @@ $main-txt-color: #525252;
 
     } // end of .compose
 
-
-.button {
-  background: rgb(60,80,8); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(60,80,8,1)), color-stop(100%,rgba(124,188,10,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(60,80,8,1) 0%,rgba(124,188,10,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(to bottom, rgba(60,80,8,1) 0%,rgba(124,188,10,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c5008', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
-  width: 200px;
+.expand {
+  background: gba(247, 247, 247, 0.69);
+  width: 300px;
   height: 75px;
-  border: 2px solid $litegreen;
   border-radius: 20px;
   text-align: center;
   margin: 0 auto;
-  color: $lime;
-  line-height: 65px;
-  box-shadow: inset 0 1px 0 1px #525252;
-  text-shadow:1px 1px 0px #aade7c;
+  position: relative;
+  margin-top: 24px;
+  color: $main-txt-color;
+  line-height: 70px;
+  box-shadow: inset 0 1px 0 1px #596D4C;
+  text-shadow:1px 1px 0px #ADB1A9;
   font-size: 40px;
+  margin-left: 100px;
+  vertical-align: top;
+
+}
+
+.button { 
+  background: rgba(214,214,197,1);
+  width: 200px;
+  height: 75px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+  color: $main-txt-color;
+  line-height: 70px;
+  box-shadow: inset 0 1px 0 1px #596D4C;
+  text-shadow:1px 1px 0px #ADB1A9;
+  font-size: 40px;
+  display: inline-block;
 
 }
 
@@ -335,7 +350,8 @@ $main-txt-color: #525252;
 #myModal {
   background-color: #fff;
   position: fixed;
-  width: 50%;
+  width: 60%;
+  height: 32%;
   top: 50%;
   left: 50%;
   margin: -15% 0 0 -25%;
@@ -355,51 +371,63 @@ $main-txt-color: #525252;
 
 
   .modalheader {
-    height: 45px;
+    width: 100%;
+    height: 35px;
+    background: $main-bg-color;
+    color: #FFF;
+    margin: 0 auto;
+    border-radius: 5px 5px 0 0;
+    
+  
   
   }
 
   .close {
-    pointer-events: auto;    
+    pointer-events: auto;  
+    margin-left: 90%;  
 
   }
 
-  .btn {
-    pointer-events: auto;
-  }
 
   .modalbody {
     max-height: 245px;
-    width: 550px;
+    width: 100%;
+    background: rgba(247, 247, 247, 0.69);
+   } 
 
-    .share {
-          height: 100px;
-          width: 610px;
-          text-align: left;
-          color: gray;
-          margin: 0 auto;
-          display: inline-block;
 
-      }
+  .share {
+    height: 100px;
+    width: 99%;
+    text-align: left;
+    color: gray;
+    margin: 0 auto;
+    display: inline-block;
 
-      .sharebutton {
-        width: 140px;
-        height: 45px;
-        border: 2px solid $litegreen;
-        border-radius: 50px;
-        text-align: center;
-        margin: 0 auto;
-        color: $lime;
-        background-color: $green;
-        line-height: 40px;
-        box-shadow: 0 1px 0 1px $tan;
+    }
 
-    } 
-  
+  .sharelocation {
+   height: 40px;
+   width: 40%;
+   display: inline-block;
+  }
+
+  .sharebutton {
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    margin-left: 80%;
+    background: rgba(214,214,197,1);
+    display: inline-block;
+    position: relative;
   }
 
   .modalfooter {
-    height: 45px;
+    height: 60px;
+    background: $main-bg-color;
+    color: #FFF;
+    margin: 0 auto;
+    border-radius: 5px 5px 0 0;
   }
 
 }

@@ -182,6 +182,18 @@ $('.button').on('click', function() {
 
 });
 
+$('.expand').on('focus', function() {
+  console.log('modal will open')
+  $('#myModal').toggleClass('dialogIsOpen');
+
+});
+
+$('.expand').on('focus', function() {
+  console.log('modal will open')
+  $('#page-wrap').toggleClass('dialogIsOpen');
+
+});
+
 $('.close').on('click', function() {
   console.log('x button will return state')
   $('#page-wrap').toggleClass('dialogIsOpen');
