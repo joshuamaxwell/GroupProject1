@@ -4,6 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>groupProject1</title>
@@ -27,63 +28,123 @@
 
 
 <!-- Just as an example -->
-
-<div class="header">
-  <div class="container">
-    <span class="home">home</span>
-    <div class="logo">
+<div id="page-wrap">
+  <div class="header">
+    <div class="container">
+      <span class="home">home</span>
+      <div class="logo">
+      </div>
+      <input class="search" type="text" name="input" placeholder="search">
     </div>
-    <input class="search" type="text" name="input" placeholder= "search">
-  </div>
-</div>
+  </div> 
 
-
-<div class="main">
-  <div class="backbox">
+  <div class="main">
+   <div class="backbox">
     <div class="container">
       <div class="sidebar">
-        <div class="top">
-          <h3>profile</h3>
-        </div>
-        <div class="outerbox">
-          <div class="profpic">
-            <img src="">
-          </div>
-          <h2 class="profname">katy campen</h2>
-          <h4 class="proflocation">black rock trail</h4>
-        </div>
-        <div class="posts">
-          <div class="tweetnum">
-            <span class="discript">posts</span>
-            <span class="num">44</span>
-          </div>
-          <div class="following">
-            <span class="discript">following</span>
-            <span class="num">54</span>
-          </div>
-          <div class="locations">
-            <span class="discript">trails</span>
-            <span class="num">55</span>
-          </div>
-        </div>
-        <div class="links">
           <div class="top">
-            <h3>places to go</h3>
+              <h3>profile</h3>
+            </div>
+            <div class="outerbox">
+              <div class="profpic">
+                <img src="">
+              </div>
+              <h2 class="profname">katy campen</h2>
+              <h4 class="proflocation">black rock trail</h4>
+            </div>
+            <div class="posts">
+              <div class="tweetnum">
+                <span class="discript">posts</span>
+                <span class="num">44</span>
+              </div>
+              <div class="following">
+                <span class="discript">following</span>
+                <span class="num">54</span>
+              </div>
+              <div class="locations">
+                <span class="discript">trails</span>
+                <span class="num">55</span>
+              </div>
+            </div>
+            <div class="links">
+              <div class="top">
+                <h3>places to go</h3>
+              </div>
+              <div class="outerbox two"></div>
           </div>
-          <div class="outerbox two"></div>
+        </div> <!-- Sidebar ends here -->
+   
+        <div class="stream">
+          <div class="compose">
+            <div class="composetitle">Compose</div>
+            <div class="button"
+            <a href="#myModal" role="button" class="btn" data-toggle ="modal">Share</a>
+            </div>
+          </div>
+          <div class="tweettitle">Your Stream</div>      
+          <div class="tweets"></div> 
+        </div> <!-- end of the .stream div -->
+      </div>  <!-- end of container div for the main page  content -->
+    </div> <!-- end of backbox -->
+  </div> <!-- end of main -->
+</div> <!-- end of pagewrap -->
+
+
+
+
+
+
+    
+    
+     
+    
+    
+    
+
+
+<script class="tweet-template" type="text/template">
+    <div class="tweet" id="<%= tweetID %>" userId="<%= userID %>">
+        <div class="avatar">
+            <img class="avatar-pic" src="<%= avatar %>">
+        </div>  <!-- end of div.avatar -->
+        <div class="tweet-header">
+            <span class="name"><%= name %></span>
+            <span class="location"><%= location %></span>
+            <span class="time"><%= time %></span>
         </div>
+        <div class="message"><%= msg %></div>
+        <div class="tweet-footer">
+            <img class="isFavorite" src="<%= isFavorite %>">
+            <span>&lt favorite</span>
+    </div> <!-- end of the .tweet div -->
+</script>
 
-      </div>
-    </div>   <!--end of the backbox div -->
-  </div> <!-- end of container div for the main page content -->
-</div> <!-- end of the .main div which is everything after the header div -->
 
+<div id="modal">
+            <div id="myModal" class="modal hide fade"  role="dialog" aria-labelledby=" myModalLabel" aria-hidden="true">
+                <div class="modalheader">
+                    <button type="button" class="close" data-toggle="modal">×</button>
+                </div>
+                <div class="modalbody">
+                    <input class="share" type="text" name=" input" value="share">
+                    <input class="sharelocation" type="text"     name="input" value="location">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-toggle="modal">Modal</button>
+                    <button class="sharebutton"data-toggle="modal">Submit</button>
+                </div>
+            </div>    
+    
+        <!-- modal box content -->
+</div> <!-- end id modal -->
+    
 
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -100,5 +161,6 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
 </body>
 </html>
