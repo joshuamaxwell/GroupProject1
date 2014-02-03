@@ -216,9 +216,7 @@ $main-txt-color: #525252;
 ////////////////here begins the styling for the .stream section
 
   .stream {
-    background-color: $gravel;
-    width: 690px;
-    height: 100%; 
+    width: 690px; 
     margin-left: 16px; // to give the margin btw stream and sidebar
     vertical-align: top;
     display: inline-block;
@@ -262,6 +260,7 @@ $main-txt-color: #525252;
 }
 
  .four {  //formally tweettitle
+        margin-top: 40px;
         width: 690px;
         height: 45px;
         border: 1px solid green;
@@ -310,7 +309,7 @@ $main-txt-color: #525252;
 /////////////// starting tweet styling
 
 .tweet {
-  margin-top: 45px;
+  // margin-top: 45px;
   outline: 2px dashed black;
   // background: rgba(241, 228, 228, 0.75);
   width: 690px;
