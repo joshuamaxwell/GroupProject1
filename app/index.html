@@ -98,6 +98,32 @@
 </div> <!-- end of pagewrap -->
 
 
+<!-- cut/paster .profile-chooser into the header area that we want the list to appear in -->
+<div class="profile-chooser">
+    <ul class="profile-chooser-rows">
+          <!-- the li elements from the template will be appended here using javascript -->
+    </ul>
+</div> <!-- end of .profile-chooser div. this div needs to be cut/pasted up into the header -->
+
+<div id="modal">
+            <div id="myModal" class="modal hide fade"  role="dialog" aria-labelledby=" myModalLabel" aria-hidden="true">
+                <div class="modalheader">
+                    <button type="button" class="close" data-toggle="modal">×</button>
+                </div>
+                <div class="modalbody">
+                    <input class="share" type="text" name=" input" value="share">
+                    <input class="sharelocation" type="text"     name="input" value="location">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-toggle="modal">Modal</button>
+                    <button class="sharebutton"data-toggle="modal">Submit</button>
+                </div>
+            </div>    
+    
+        <!-- modal box content -->
+</div> <!-- end id modal -->
+
+
 <script class="tweet-template" type="text/template">
     <div class="tweet" id="<%= tweetID %>" userId="<%= userID %>">
         <div class="avatar">
@@ -123,31 +149,6 @@
         <h3 class="chooser-name"><%= name %></h3>
     </li>
 </script>
-
-
-<div class="profile-chooser">
-    <ul class="profile-chooser-rows">
-          
-    </ul>
-</div> <!-- end of .profile-chooser div. this div needs to be cut/pasted up into the header -->
-
-<div id="modal">
-            <div id="myModal" class="modal hide fade"  role="dialog" aria-labelledby=" myModalLabel" aria-hidden="true">
-                <div class="modalheader">
-                    <button type="button" class="close" data-toggle="modal">×</button>
-                </div>
-                <div class="modalbody">
-                    <input class="share" type="text" name=" input" value="share">
-                    <input class="sharelocation" type="text"     name="input" value="location">
-                </div>
-                <div class="modal-footer">
-                    <button class="btn" data-toggle="modal">Modal</button>
-                    <button class="sharebutton"data-toggle="modal">Submit</button>
-                </div>
-            </div>    
-    
-        <!-- modal box content -->
-</div> <!-- end id modal -->
     
 
 
