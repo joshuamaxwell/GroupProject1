@@ -1,6 +1,6 @@
 //Replace the following two urls with our desired icon urls for favorite or not favorite
-var favoriteFalse = 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTqXNizOUNwsKmN0nJ4D0Ac9FgEbL4aNFtVYxjWaS3vSIj06bfmkw'
-var favoriteTrue = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU_nAnDq8S6OHyLravOoWgEY0JYoevXn691p1kti4XQH12hPihOg'
+var favoriteFalse = 'images/fire.svg'
+var favoriteTrue = 'images/firegold.svg'
 
 var users = [{
     name: "Billy Joe",
