@@ -197,13 +197,13 @@ function registerNewUser(user) {
 
 // pop out compose button jquery
 
-$('.button').on('click', function() {
+$('.postimage').on('click', function() {
     console.log('page will recede')
     $('#page-wrap').toggleClass('dialogIsOpen');
 
 });
 
-$('.button').on('click', function() {
+$('.postimage').on('click', function() {
     console.log('modal will open')
     $('#myModal').toggleClass('dialogIsOpen');
 

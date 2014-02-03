@@ -223,7 +223,7 @@ $main-txt-color: #525252;
     
 
     .three{
-      height: 45px;
+      height: 35px;
       width: 690px;
     }
 
@@ -257,22 +257,19 @@ $main-txt-color: #525252;
 
 }
 
-.button { 
-  background: rgba(214,214,197,1);
-  width: 200px;
-  height: 75px;
-  border-radius: 20px;
-  text-align: center;
+.postimage {
   margin: 0 auto;
-  margin-top: 24px;
-  color: $main-txt-color;
-  line-height: 70px;
-  box-shadow: inset 0 1px 0 1px #596D4C;
-  text-shadow:1px 1px 0px #ADB1A9;
-  font-size: 40px;
   display: inline-block;
 
+  img {
+    margin-top: -50px;
+    margin-left: 15px;
+    width: 225px;
+    cursor: pointer;
+  }
+
 }
+
 
  .four {  //formally tweettitle
         margin-top: 40px;
@@ -351,7 +348,7 @@ $main-txt-color: #525252;
   background-color: #fff;
   position: fixed;
   width: 60%;
-  height: 32%;
+  height: 45%;
   top: 50%;
   left: 50%;
   margin: -15% 0 0 -25%;
@@ -360,7 +357,7 @@ $main-txt-color: #525252;
   transform: scale(1.5);
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 6px;
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.3);
 
 
   &.dialogIsOpen {
@@ -385,24 +382,29 @@ $main-txt-color: #525252;
   .close {
     pointer-events: auto;  
     margin-left: 90%;  
+    cursor: pointer;
 
   }
 
 
   .modalbody {
-    max-height: 245px;
+    max-height: 330px;
+    height: 89%;
     width: 100%;
     background: rgba(247, 247, 247, 0.69);
    } 
 
 
   .share {
+    padding: 15px;
     height: 100px;
-    width: 99%;
+    width: 75%;
     text-align: left;
     color: gray;
-    margin: 0 auto;
+    margin: 15px 68px;
     display: inline-block;
+    overflow-x: hidden;
+    border-radius: 7px;
 
     }
 
@@ -410,25 +412,24 @@ $main-txt-color: #525252;
    height: 40px;
    width: 40%;
    display: inline-block;
+   overflow-x: hidden;
+   border-radius: 7px;
+   margin: 15px 68px;
   }
 
   .sharebutton {
     width: 100px;
     height: 40px;
     margin: 0 auto;
-    margin-left: 80%;
+    margin-left: 75%;
     background: rgba(214,214,197,1);
     display: inline-block;
     position: relative;
+    border-radius: 7px;
+    cursor: pointer;
   }
 
-  .modalfooter {
-    height: 60px;
-    background: $main-bg-color;
-    color: #FFF;
-    margin: 0 auto;
-    border-radius: 5px 5px 0 0;
-  }
+  
 
 }
     
