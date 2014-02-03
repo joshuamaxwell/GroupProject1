@@ -88,16 +88,16 @@ $main-txt-color: #525252;
         .logo:hover {
           border-bottom: 17px solid rgba(82, 82, 82, 0.6);
         }
-          .search {
-            float: right;
-            margin-top: 10px;
-            height: 13px;
-            width: 120px;
-            border-radius: 10px;
-            padding-left: 10px;
-            text-align: left;
-            color: gray;
-          }    
+        .profile-chooser { //this used to be the .search class 
+          float: right;
+          margin-top: 10px;
+          height: 13px;
+          width: 120px;
+          border-radius: 10px;
+          padding-left: 10px;
+          text-align: left;
+          color: gray;
+        }    
 
 } // end of .header
 
